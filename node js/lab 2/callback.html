@@ -1,0 +1,33 @@
+<!-- wap to demonstrate callback function. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var n1 = parseInt(prompt("Enter first number : "));
+        var n2 = parseInt(prompt("Enter second number : "));
+
+        function print(sum){
+            alert("Sum : " + sum);
+        }
+
+        function calc(n1,n2,callback){
+            var sum = n1 + n2;
+            print(sum);
+        }
+
+        calc(n1,n2,print);
+
+    </script>
+
+</body>
+
+</html>

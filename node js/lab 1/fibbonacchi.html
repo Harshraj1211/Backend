@@ -1,0 +1,31 @@
+<!-- fibbonacchi series for given number. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var input = parseInt(prompt("Enter the number : "));
+        var first = 0;
+        var second = 1;
+        var arr = new Array();
+        for (let index = 1; index <= input; index++) {
+            var third = first + second;
+            arr.push(third);
+            first = second;
+            second = third;
+            third = 0;
+        }
+
+        for (let index = 0; index < arr.length; index++) {
+            const element = arr[index];
+            document.writeln(element);
+        }
+
+    </script>
+</body>
+</html>

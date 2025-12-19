@@ -1,0 +1,44 @@
+<!-- number is pelindrome or not... -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let input = parseInt(prompt("Enter a number : "));
+        if (isNaN(input)) {
+            alert("Invalid number");
+        } else {
+            let temp = input;
+            var arr = [];
+            while (temp > 0) {
+                let a = temp % 10;
+                arr.push(a);
+                temp = Math.floor(temp / 10);
+            }
+            if (arr.length === 0){
+                arr.push(0);
+            } 
+
+            let isPalindrome = true;
+            for (let i = 0; i < arr.length / 2; i++) {
+                if (arr[i] !== arr[arr.length - 1 - i]) {
+                    isPalindrome = false;
+                    break;
+                }
+            }
+
+            if (isPalindrome) {
+                alert(input + " is a palindrome");
+            } else {
+                alert(input + " is not a palindrome");
+            }
+        }
+    </script>
+</body>
+</html>

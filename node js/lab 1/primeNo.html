@@ -1,0 +1,35 @@
+<!-- prime number  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const raw = parseInt(prompt("Enter the number:"));
+        if (raw === null) {
+            alert("Input cancelled.");
+        } else {
+            if (raw < 2) {
+                alert(raw + " is not a prime number.");
+            } else {
+                let isPrime = true;
+                for (let a = 2; a <= Math.sqrt(raw); a++) {
+                    if (raw % a === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) {
+                    alert(raw + " is a prime number.");
+                } else {
+                    alert(raw + " is not a prime number.");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!-- 2. demonstrate the difference between let and var. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let a = 5;
+        var b = 10;
+
+        function changeValues () {
+            a = 10;
+            b = 15;
+            document.writeln(a + " a inside the function<br>");
+            document.writeln(b + " b inside the function<br>");
+        }
+
+        document.writeln(a + " a outside the function before calls<br>");
+        document.writeln(b + " b outside the function before calls<br>");
+
+        changeValues();
+        
+        document.writeln(a + " a outside the function after calls<br>");
+        document.writeln(b + " b outside the function after calls<br>");
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!-- print the factop of the given number -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var input = parseInt(prompt("Enter the number : "));
+        var temp = input;
+        var arr = new Array();
+        for(let index = 1 ; index <= input ; index++) {
+            if (temp%index == 0){
+                arr.push(index);
+            }
+        }
+
+        for (let index = 0; index < arr.length; index++) {
+            let element = arr[index];
+            document.writeln(element);
+        } 
+    </script>
+
+</body>
+</html>

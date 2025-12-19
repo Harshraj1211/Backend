@@ -1,0 +1,37 @@
+<!-- check the given number is armstrong or not... -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var input = parseInt(prompt("Enter the number : "));
+        var temp = input;
+        var count = 0;
+        
+        while(temp > 0){
+            temp = temp/10;
+            count++;
+        }
+        temp = input;
+        let sum = 0;
+        for(let i = 0 ; i<count ; i++){
+            let ld = temp%10;
+            let xyz = Math.pow(ld,count);
+            sum+=xyz;
+            temp = temp/10;
+        }
+
+        if(sum === input){
+            alert(input + " is a armstrong number.");
+        }
+        else{
+            alert(input + " isn't a armstrong number.");
+        }
+    </script>
+</body>
+</html>
